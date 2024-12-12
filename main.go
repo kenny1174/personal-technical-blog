@@ -1,10 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"technicalBlog/utils"
+	"technicalBlog/model"
+	"technicalBlog/routes"
 )
 
 func main() {
-	fmt.Println(utils.AppMode)
+	//引用数据库
+	model.InitDb()
+
+	routes.InitRouter()
 }
